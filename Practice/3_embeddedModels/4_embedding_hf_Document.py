@@ -9,4 +9,5 @@ document = [
 ]
 # embedding tools invoking.
 vector = embedding_Model.embed_documents(document)
+# printing the vector in the form of string [:5]
 print(str(vector[:5]))
