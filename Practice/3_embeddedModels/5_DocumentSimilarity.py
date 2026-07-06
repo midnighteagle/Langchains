@@ -38,9 +38,9 @@ embed_query = embeddingModel.embed_query(query)
 score  = cosine_similarity([embed_query], embed_document)[0]
 #print the score enumarate and list.
 
-# print(enumerate(score)) # it Enumate the score only.
+print(enumerate(score)) # it Enumate the score only.
 
-# print (list(enumerate(score))) # first enumate the vector of both doc and query then list the score.
+print (list(enumerate(score))) # first enumate the vector of both doc and query then list the score.
 
 print(sorted(list(enumerate(score)))) # keep this sorted one.
 
