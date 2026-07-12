@@ -21,8 +21,11 @@ class Review(BaseModel):
     
 # creation of Structured Model
 Structured_Model = model.with_structured_output(Review)
+# Structured_Model = ChatOpenAI().with_structured_output(Review)
 
-result  = Structured_Model.invoke(""" I recently upgraded to the Samsung Galaxy S24 Ultra , and I Must say, it's an absolute powerhouse! The Snapdragon 8 gen 3 processor makes everything lighting fast-Weather I'm gamings, Multitasking, or editing photos. The 5000mAh battery easily lasts a full day even with heavy use, and the 45W fast charging is a lifesaver.
+# user_Review are here!! 
+user_review = (""" 
+I recently upgraded to the Samsung Galaxy S24 Ultra , and I Must say, it's an absolute powerhouse! The Snapdragon 8 gen 3 processor makes everything lighting fast-Weather I'm gamings, Multitasking, or editing photos. The 5000mAh battery easily lasts a full day even with heavy use, and the 45W fast charging is a lifesaver.
                                 
 The S-pen integaration is a great touch for note-taking and quick sketches, through I don't use it often. What really blew me away is the 200MP camera-the night mode is stunning, captureing crisp, vibrant images even in low light. Zooming up to 100X.
 
@@ -40,7 +43,9 @@ bloatware still exists in One UI.
 Expensive comapred to Competitors.
 
 Review By Akshat Arya. if not given then write Anonmous
+
 """)
+result  = Structured_Model.invoke(user_review)
 
 print(result)
 print("Summary: ",result.summary)

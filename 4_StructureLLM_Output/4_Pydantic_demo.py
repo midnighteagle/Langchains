@@ -16,8 +16,12 @@ new_Student = {'age': '32', 'email':'abc@gmail.com',} #if you make int as string
 # new_Student1:Student = {}
 
 Student = Student(**new_Student)
+
+# converting the student in the Dictionary.
 Student_dict = dict(Student)
+# now by the help of Dict print the age of Student.
 print(Student_dict['age'])
+
 student_json = Student.model_dump_json()
 print(student_json)
 print(student_json)

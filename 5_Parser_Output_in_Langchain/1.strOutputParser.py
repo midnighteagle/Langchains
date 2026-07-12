@@ -17,15 +17,21 @@ template2 = PromptTemplate(
     template = 'write a 5 line Summary on the following text. \n {text}',
     input_variables = ['text'] 
 )
+
+
 # run the first template1 and store in prompt1
 prompt1 = template1.invoke({'topic' : "black hole"})
+
 # run the prompt1 by the help of model using store in result.
 result = model.invoke(prompt1)
 
+
 # run the first template2 and store in prompt2
 prompt2 = template2.invoke({'text' : result.content})
+
 # run the prompt1 by the help of model using store in result1.
 result1 = model.invoke(prompt2)
+
 
 # print the content of result1.
 print(result1.content)
