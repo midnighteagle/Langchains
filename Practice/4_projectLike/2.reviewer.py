@@ -9,7 +9,9 @@ load_dotenv()
 # setup of the model
 model = ChatOpenAI()
 
+# creation of header file.
 st.header("Users Reviews")
+# creation of class by baseModel of Pydantic.
 class Review (BaseModel):
     
     key_themes : list[str] = Field (descriptions = "give the all the key themes discussed in the review in a list")
