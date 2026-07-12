@@ -27,7 +27,7 @@ result = model.invoke(prompt1)
 
 
 # run the first template2 and store in prompt2
-prompt2 = template2.invoke({'text' : result.content})
+prompt2 = template2.invoke({'text' : result.content}) 
 
 # run the prompt1 by the help of model using store in result1.
 result1 = model.invoke(prompt2)
