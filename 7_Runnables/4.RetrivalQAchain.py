@@ -18,9 +18,6 @@ vectorstore = FAISS.from_documents(docs, OpenAIEmbeddings())
 # Create a retrivers (fetches relevent documents)
 retrivers = vectorstore.as_retriever()
 
-
-
-
 # Initialised the llm 
 llm = OpenAI(model = "gpt-3.5-turbo", temperature = 0.7)
 
