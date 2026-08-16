@@ -18,7 +18,8 @@ new_Student = {'age': '32', 'email':'abc@gmail.com',} #if you make int as string
 Student = Student(**new_Student)
 
 # converting the student in the Dictionary.
-Student_dict = dict(Student)
+# Student_dict = dict(Student) # it Also worked properly it is valid for v1 of pydantic.
+Student_dict = Student.model_dump() # it is used to student convert into dictionary in pydantic version 2.
 # now by the help of Dict print the age of Student.
 print(Student_dict['age'])
 
