@@ -17,6 +17,8 @@ schema = [
     ResponseSchema (name = 'fact_3', description = 'Fact 3 about the topic'),
 ]
 parser = StructuredOutputParser.from_response_schemas(schema)
+
+
 template = PromptTemplate(
     template = 'Give 3 fact about {topic} \n {format_instruction}',
     input_variables = ['topic'],
