@@ -557,7 +557,7 @@ Please contact the customer regarding this enquiry.
         # =================================================
         if not st.session_state.get("chatbot_started"):
             st.switch_page(
-                "pages/chatbot1.py"
+                "pages/ChatBot.py"
             )
 
 
