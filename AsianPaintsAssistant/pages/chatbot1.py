@@ -47,7 +47,6 @@ if not knowledge_path.exists():
     st.error(
         "❌ asian_paints_knowledge.txt was not found."
     )
-
     st.stop()
 
 
@@ -291,7 +290,7 @@ with st.sidebar:
 
     if st.button(
         "🗑️ Clear Chat",
-        use_container_width=True
+        use_container_width=True 
     ):
 
         st.session_state.chat_messages = [

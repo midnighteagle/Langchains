@@ -1,6 +1,6 @@
 import os
 import smtplib
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 import streamlit as st
 from dotenv import load_dotenv
@@ -394,7 +394,8 @@ if st.button(
         "status": "New",
 
         "created_at":
-            datetime.now(timezone.utc)
+            datetime.now(timezone.utc) + timedelta(hours=5,minutes=30) # better time consistancy on the server while using UTC
+    
     }
 
 
